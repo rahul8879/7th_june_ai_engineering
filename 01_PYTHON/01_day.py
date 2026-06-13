@@ -36,6 +36,34 @@ print(test_1)
 # else:
 #     print('I am here')
 
+# number = input('Enter a number : ')
+# print(number)
+# print(type(number))
+# print(len(number))
+
+# print(int(number)**3)
+# print(number+5)
+
+salary = 121.43
+print(type(salary))
+print(int(salary))
+
+ctc= 1935
+cleaned_ctc = float(ctc)
+print(type(cleaned_ctc))
+
+
+invoice_charge= 11834.636342
+print(round(invoice_charge,1))
+# type casting
+# int() , float() , str()
+
+name = 'rahul'
+print(type(name))
+print(int(name))
+
+# int , float , str, bool
+# 
 
 
 
