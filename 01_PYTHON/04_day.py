@@ -1,26 +1,53 @@
+from openai import OpenAI
+
+client = OpenAI(api_key='')
+
+
 
 
 # Below sample code is an example of f String in python
 
+emails = [
+"Hi Team, I am facing the issue while using the applications",
+"Hi tea, very bad experiance with your product",
+"Wow what a bad product"
 
-sender = 'rahul@gmail.com'
-date= '2023-01-01'
-email= "I am facingthe issue while login the system. Please help me to resolve this issue"
+]
 
-prompt_v2 = f"""You are an expert email classifier.
-Classify the following email.
-
-From: {sender}
-Date: {date}
-Email: {email}
-
-Categories:
-- Spam
-- Important
-- Newsletter
-- Personal
+# for i in emails:
+#     print(i)
 
 
-Your classification:"""
+# sales = [34,45,51,43,12,21,34,50]
 
-print(prompt_v2)
+# print(sales[2])
+
+
+output = []
+
+for email in emails:
+    prompt = f"""You are an expert email classifier.
+            Classify the following email.
+
+            Email: {email}
+
+            Categories:
+            - Spam
+            - Important
+            - Newsletter
+            - Personal
+            Your classification:"""
+    
+    response = client.chat.completions.create(
+        model ="gpt-4o-mini",
+        messages=[
+            {"role":"user", "content":prompt}
+        ]
+    )
+    output.append(response.choices[0].message.content.strip())
+
+print(output)
+    
+    
+   
+  
