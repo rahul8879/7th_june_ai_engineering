@@ -111,14 +111,24 @@ output = ["Category : SPAM | Confidence : 0.9",
              "Category : TECHNICAL | Confidence : 0.4"]
 
 final_output = []
-for i in output:
-    first_split = i.split(" | ")
-    for j in first_split:
-        se_split = j.split(" : ")
-        # print(se_split)
-        final_output.append(se_split[1])
-print(final_output)
+# for i in output:
+#     first_split = i.split(" | ")
+#     for j in first_split:
+#         se_split = j.split(" : ")
+#         # print(se_split)
+#         final_output.append(se_split[1])
+# print(final_output)
 
+final_output = []
+for i in output:
+    parts = i.split(" | ")
+    category = parts[0].split(" : ")[1]
+    confidence = parts[1].split(" : ")[1]
+    # print(category)
+    # print(confidence)
+    final_output.append((category,confidence))
+ 
+print(final_output)
 
 
 
