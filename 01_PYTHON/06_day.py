@@ -57,3 +57,27 @@ sales_data = {
 # - Store data in a dictionary
 # - use the key to search the particular key 
 # - this process will not take n times ( o(n))
+
+
+# 
+
+sales_data = {
+   'day_1':[100, 200, 300],
+   'day_2':[150, 250, 350],
+   'day_3':[200, 300, 400],
+   'day_4':[250, 350, 450],
+   'day_5':[12]
+
+}
+
+
+output = {}
+for key, value in sales_data.items():
+    avg_sales = sum(value) / len(value)
+    output[key] = avg_sales
+
+print(output)
+
+# print(sales_data.keys())
+# print(sales_data.values())
+# print(sales_data.items())
