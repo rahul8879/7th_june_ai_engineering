@@ -125,14 +125,32 @@ product_details = {
 # print(my_dict)
 
 
-words = ['apple', 'banana', 'grape', 'kiwi', 'mango','apple']
-# output {'apple': 5, 'banana': 6, 'grape': 5, 'kiwi': 4, 'mango': 5}
+# words = ['apple', 'banana', 'grape', 'kiwi', 'mango','apple']
+# # output {'apple': 5, 'banana': 6, 'grape': 5, 'kiwi': 4, 'mango': 5}
 
 
-final = {} 
-for i in words:
-    final[i] = len(i)
+# final = {} 
+# for i in words:
+#     final[i] = len(i)
 
-print(final) # {'apple': 5, 'banana': 6, 'grape': 5, 'kiwi': 4, 'mango': 5, 'something': 9}
-data = [12,13,13]
-print(data) #[12, 13, 13]
+# print(final) # {'apple': 5, 'banana': 6, 'grape': 5, 'kiwi': 4, 'mango': 5, 'something': 9}
+# data = [12,13,13]
+# print(data) #[12, 13, 13]
+
+# city_a = ['id1', 'id2', 'id3']
+# city_b = ['id2', 'id3', 'id4']
+
+# total_count = len(city_a) + len(city_b)
+# print(total_count) # 6
+city_a = ['id1', 'id2', 'id3','id1']
+print(len(city_a)) # 4
+city_a = {'id1', 'id2', 'id3','id1'}
+print(city_a)
+print(len(city_a)) # 3
+
+city_a = {'id1', 'id2', 'id3'}
+city_b = {'id2', 'id3', 'id4'}
+print(city_a.union(city_b)) # {'id1', 'id2', 'id3', 'id4'}
+print(city_a.intersection(city_b)) # {'id2', 'id3'}
+print(city_a.difference(city_b)) # {'id1', 'id3'}
+city_a[1]= 'id5' # this will give error because set is unorderd and unindexed TypeError: 'set' object does not support item assignment
