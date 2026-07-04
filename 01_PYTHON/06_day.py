@@ -111,8 +111,28 @@ product_details = {
 # print(product_details['product_1']) # {'name': 'Parle G', 'price': 100, 'category': 'Category 1'} # again a dict as a value here 
 # print(product_details['product_1']['name']) # Product 1
 
-total_cost = 0
-for key, value in product_details.items():
-    total_cost = total_cost + value['price']
+# total_cost = 0
+# for key, value in product_details.items():
+#     total_cost = total_cost + value['price']
 
-print("Total cost:", total_cost)
+# print("Total cost:", total_cost)
+
+
+# my_dict = {'name': 'satish', 'age': 27, 'address': 'guntur'}
+# print(my_dict.pop('name')) # it will delete the age key 
+# print(my_dict)
+# print(my_dict.clear()) # it will delete the last key value pair from the dict
+# print(my_dict)
+
+
+words = ['apple', 'banana', 'grape', 'kiwi', 'mango','apple']
+# output {'apple': 5, 'banana': 6, 'grape': 5, 'kiwi': 4, 'mango': 5}
+
+
+final = {} 
+for i in words:
+    final[i] = len(i)
+
+print(final) # {'apple': 5, 'banana': 6, 'grape': 5, 'kiwi': 4, 'mango': 5, 'something': 9}
+data = [12,13,13]
+print(data) #[12, 13, 13]
