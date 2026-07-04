@@ -71,13 +71,48 @@ sales_data = {
 }
 
 
-output = {}
-for key, value in sales_data.items():
-    avg_sales = sum(value) / len(value)
-    output[key] = avg_sales
+# output = {}
+# for key, value in sales_data.items():
+#     avg_sales = sum(value) / len(value)
+#     output[key] = avg_sales
 
-print(output)
+# print(output)
 
 # print(sales_data.keys())
 # print(sales_data.values())
 # print(sales_data.items())
+
+
+
+product_details = {
+   'product_1':{
+       'name':'Parle G',
+       'price':100,
+       'category':'Category 1'
+   },
+   'product_2':{
+       'name':'Macbook',
+       'price':150,
+       'category':'Category 2'
+   },
+   'product_3':{
+       'name':'Product 3',
+       'price':200,
+       'category':'Category 3'
+   },
+   'product_4':{
+       'name':'Product 4',
+       'price':250,
+       'category':'Category 4'
+   }
+}
+
+# print(product_details.keys())
+# print(product_details['product_1']) # {'name': 'Parle G', 'price': 100, 'category': 'Category 1'} # again a dict as a value here 
+# print(product_details['product_1']['name']) # Product 1
+
+total_cost = 0
+for key, value in product_details.items():
+    total_cost = total_cost + value['price']
+
+print("Total cost:", total_cost)
