@@ -1,33 +1,97 @@
-# import numpy as np
+# # import numpy as np
 
 
-# generate 1000 random values
-# import time
-# x = np.random.randint(20, 100, 10000)
-# start_time = time.time()
-# for i in x:
-#     if i == 20:
-#         pass
-# end_time = time.time()
-# print(f"Time taken: {end_time - start_time} seconds")
+# # generate 1000 random values
+# # import time
+# # x = np.random.randint(20, 100, 10000)
+# # start_time = time.time()
+# # for i in x:
+# #     if i == 20:
+# #         pass
+# # end_time = time.time()
+# # print(f"Time taken: {end_time - start_time} seconds")
 
-sales_data = {
-   'day_1':[100, 200, 300],
-   'day_2':[150, 250, 350],
-   'day_3':[200, 300, 400],
-   'day_4':[250, 350, 450],
-   'day_5':12
+# sales_data = {
+#    'day_1':[100, 200, 300],
+#    'day_2':[150, 250, 350],
+#    'day_3':[200, 300, 400],
+#    'day_4':[250, 350, 450],
+#    'day_5':12
 
-}
+# }
+
+# # product_details = {
+# #    'product_1':{
+# #        'name':'Product 1',
+# #        'price':100,
+# #        'category':'Category 1'
+# #    },
+# #    'product_2':{
+# #        'name':'Product 2',
+# #        'price':150,
+# #        'category':'Category 2'
+# #    },
+# #    'product_3':{
+# #        'name':'Product 3',
+# #        'price':200,
+# #        'category':'Category 3'
+# #    },
+# #    'product_4':{
+# #        'name':'Product 4',
+# #        'price':250,
+# #        'category':'Category 4'
+# #    }
+# # }
+
+
+# # access some of the data
+# # print(product_details['product_1'])
+# # print(sales_data['day_6'])
+# # print(sales_data.get('day_6', 'No data available for day 6'))
+# # sales_data['day_6'] = [300, 400, 500]  # this is the way like how we can add key or data into dict
+# # print(sales_data.get('day_6', 'No data available for day 6'))
+# # sales_data['day_5'] = [434, 43, 12]  # this is the way like how we can add key or data into dict
+# # print(sales_data.get('day_5', 'No data available for day 5'))
+
+# # For building search functionlities 
+# # - Store data in a dictionary
+# # - use the key to search the particular key 
+# # - this process will not take n times ( o(n))
+
+
+# # 
+
+# sales_data = {
+#    'day_1':[100, 200, 300],
+#    'day_2':[150, 250, 350],
+#    'day_3':[200, 300, 400],
+#    'day_4':[250, 350, 450],
+#    'day_5':[12]
+
+# }
+
+
+# # output = {}
+# # for key, value in sales_data.items():
+# #     avg_sales = sum(value) / len(value)
+# #     output[key] = avg_sales
+
+# # print(output)
+
+# # print(sales_data.keys())
+# # print(sales_data.values())
+# # print(sales_data.items())
+
+
 
 # product_details = {
 #    'product_1':{
-#        'name':'Product 1',
+#        'name':'Parle G',
 #        'price':100,
 #        'category':'Category 1'
 #    },
 #    'product_2':{
-#        'name':'Product 2',
+#        'name':'Macbook',
 #        'price':150,
 #        'category':'Category 2'
 #    },
@@ -43,25 +107,57 @@ sales_data = {
 #    }
 # }
 
+# # print(product_details.keys())
+# # print(product_details['product_1']) # {'name': 'Parle G', 'price': 100, 'category': 'Category 1'} # again a dict as a value here 
+# # print(product_details['product_1']['name']) # Product 1
 
-# access some of the data
-# print(product_details['product_1'])
-# print(sales_data['day_6'])
-# print(sales_data.get('day_6', 'No data available for day 6'))
-# sales_data['day_6'] = [300, 400, 500]  # this is the way like how we can add key or data into dict
-# print(sales_data.get('day_6', 'No data available for day 6'))
-# sales_data['day_5'] = [434, 43, 12]  # this is the way like how we can add key or data into dict
-# print(sales_data.get('day_5', 'No data available for day 5'))
+# # total_cost = 0
+# # for key, value in product_details.items():
+# #     total_cost = total_cost + value['price']
 
-# For building search functionlities 
-# - Store data in a dictionary
-# - use the key to search the particular key 
-# - this process will not take n times ( o(n))
+# # print("Total cost:", total_cost)
 
 
-# 
+# # my_dict = {'name': 'satish', 'age': 27, 'address': 'guntur'}
+# # print(my_dict.pop('name')) # it will delete the age key 
+# # print(my_dict)
+# # print(my_dict.clear()) # it will delete the last key value pair from the dict
+# # print(my_dict)
 
-sales_data = {
+
+# # words = ['apple', 'banana', 'grape', 'kiwi', 'mango','apple']
+# # # output {'apple': 5, 'banana': 6, 'grape': 5, 'kiwi': 4, 'mango': 5}
+
+
+# # final = {} 
+# # for i in words:
+# #     final[i] = len(i)
+
+# # print(final) # {'apple': 5, 'banana': 6, 'grape': 5, 'kiwi': 4, 'mango': 5, 'something': 9}
+# # data = [12,13,13]
+# # print(data) #[12, 13, 13]
+
+# # city_a = ['id1', 'id2', 'id3']
+# # city_b = ['id2', 'id3', 'id4']
+
+# # total_count = len(city_a) + len(city_b)
+# # print(total_count) # 6
+# city_a = ['id1', 'id2', 'id3','id1']
+# print(len(city_a)) # 4
+# city_a = {'id1', 'id2', 'id3','id1'}
+# print(city_a)
+# print(len(city_a)) # 3
+
+# city_a = {'id1', 'id2', 'id3'}
+# city_b = {'id2', 'id3', 'id4'}
+# print(city_a.union(city_b)) # {'id1', 'id2', 'id3', 'id4'}
+# print(city_a.intersection(city_b)) # {'id2', 'id3'}
+# print(city_a.difference(city_b)) # {'id1', 'id3'}
+# city_a[1]= 'id5' # this will give error because set is unorderd and unindexed TypeError: 'set' object does not support item assignment
+
+
+
+sales_data_1 = {
    'day_1':[100, 200, 300],
    'day_2':[150, 250, 350],
    'day_3':[200, 300, 400],
@@ -70,87 +166,6 @@ sales_data = {
 
 }
 
-
-# output = {}
-# for key, value in sales_data.items():
-#     avg_sales = sum(value) / len(value)
-#     output[key] = avg_sales
-
-# print(output)
-
-# print(sales_data.keys())
-# print(sales_data.values())
-# print(sales_data.items())
-
-
-
-product_details = {
-   'product_1':{
-       'name':'Parle G',
-       'price':100,
-       'category':'Category 1'
-   },
-   'product_2':{
-       'name':'Macbook',
-       'price':150,
-       'category':'Category 2'
-   },
-   'product_3':{
-       'name':'Product 3',
-       'price':200,
-       'category':'Category 3'
-   },
-   'product_4':{
-       'name':'Product 4',
-       'price':250,
-       'category':'Category 4'
-   }
-}
-
-# print(product_details.keys())
-# print(product_details['product_1']) # {'name': 'Parle G', 'price': 100, 'category': 'Category 1'} # again a dict as a value here 
-# print(product_details['product_1']['name']) # Product 1
-
-# total_cost = 0
-# for key, value in product_details.items():
-#     total_cost = total_cost + value['price']
-
-# print("Total cost:", total_cost)
-
-
-# my_dict = {'name': 'satish', 'age': 27, 'address': 'guntur'}
-# print(my_dict.pop('name')) # it will delete the age key 
-# print(my_dict)
-# print(my_dict.clear()) # it will delete the last key value pair from the dict
-# print(my_dict)
-
-
-# words = ['apple', 'banana', 'grape', 'kiwi', 'mango','apple']
-# # output {'apple': 5, 'banana': 6, 'grape': 5, 'kiwi': 4, 'mango': 5}
-
-
-# final = {} 
-# for i in words:
-#     final[i] = len(i)
-
-# print(final) # {'apple': 5, 'banana': 6, 'grape': 5, 'kiwi': 4, 'mango': 5, 'something': 9}
-# data = [12,13,13]
-# print(data) #[12, 13, 13]
-
-# city_a = ['id1', 'id2', 'id3']
-# city_b = ['id2', 'id3', 'id4']
-
-# total_count = len(city_a) + len(city_b)
-# print(total_count) # 6
-city_a = ['id1', 'id2', 'id3','id1']
-print(len(city_a)) # 4
-city_a = {'id1', 'id2', 'id3','id1'}
-print(city_a)
-print(len(city_a)) # 3
-
-city_a = {'id1', 'id2', 'id3'}
-city_b = {'id2', 'id3', 'id4'}
-print(city_a.union(city_b)) # {'id1', 'id2', 'id3', 'id4'}
-print(city_a.intersection(city_b)) # {'id2', 'id3'}
-print(city_a.difference(city_b)) # {'id1', 'id3'}
-city_a[1]= 'id5' # this will give error because set is unorderd and unindexed TypeError: 'set' object does not support item assignment
+from utils import sales_avg
+output = sales_avg(sales_data_1)
+print(output)
