@@ -5,7 +5,7 @@ load_dotenv()
 client = OpenAI()
 def call_llm(prompt):
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-3.5-turbo",
         messages=[
             {
                 "role": "user",
@@ -17,6 +17,7 @@ def call_llm(prompt):
 
 
 def cleaning(text):
+    print('first output from model to cleaning functions', text)
     # Split the text by '|'
     parts = text.split('|')
     
